@@ -19,9 +19,10 @@ class CategoriesView
         $this->smarty->display('templates/categoriesList.tpl');
     
     }
-    function renderItemsByCategory($items, $category)
+    function renderItemsByCategory($logged,$items, $category)
     {
         $this->smarty->assign('titulo', "Lista de productos en esta categoria: ");
+        $this->smarty->assign('logged', $logged);
         $this->smarty->assign('categoria', $category);
         $this->smarty->assign('items', $items);
         $this->smarty->display('templates/itemsByCat.tpl');

@@ -29,9 +29,10 @@ class CategoriesController
     }
     function showItemsInCat($id)
     {
+        $logged = $this->authHelper->checkLoggedIn();
         $items = $this->modelItems->getItemsByCategory($id);
         $category = $this->model->getCategoryForItem($id);
-        $this->view->renderItemsByCategory($items, $category);
+        $this->view->renderItemsByCategory($logged,$items, $category);
     }
     function addCategory()
     {
