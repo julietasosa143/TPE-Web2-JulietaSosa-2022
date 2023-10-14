@@ -1,6 +1,4 @@
 
-
-
 <?php
 require_once "./view/CategoriesView.php";
 class CategoriesModel

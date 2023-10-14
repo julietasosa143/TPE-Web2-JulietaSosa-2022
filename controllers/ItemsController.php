@@ -17,8 +17,8 @@ class ItemsController
     {
         $this->model = new ItemsModel();
         $this->view = new ItemsView();
-        $this -> modelC= new CategoriesModel();
-        $this-> authHelper = new AuthHelper();
+        $this->modelC= new CategoriesModel();
+        $this->authHelper = new AuthHelper();
     }
 
     function showItems()
